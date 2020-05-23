@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> my webpage </title>
+    <meta charset="utf-8">
+    <meta name="descirption" content="webpage, with buttons ">
+    <meta name="keywords" content="Mths,website">
+    <meta name="author" content="Ahmad-El-khawaldeh">
+    <meta name="viewport" content="width=device-width,intial-scale1.0">
+   </head>
+        <body> 
+          Enter day: <input type="text" id="num1" /><br /><br />
+
+    Please enter your age: <input type="text" id="num2" /><br /><br />
+
+    <input type="button" value="enter" onclick="checkNum()" />
+
+  </body>
+
+  <script>
+
+    function checkNum() {
+
+
+      let day = document.getElementById("num1").value; 
+
+      let age = parseInt(document.getElementById("num2").value); 
+
+      let weekends = ["Saturday", "Sunday"]; 
+      
+
+      if (day == "saturday" || day == "sunday") {
+
+       
+
+        alert("Time to relex");
+
+      } else if (
+
+        (day == "Monday" ||
+
+          day == "tuesday" ||
+
+          day == "wednesday" ||
+
+          day == "thursday" ||
+
+          day == "friday") &&
+
+        age < 18
+
+      ) {
+
+        alert("Time for school!");
+
+      } else if (
+
+        (day == "monday" ||
+
+          day == "Tuesday" ||
+
+          day == "Wednesday" ||
+
+          day == "Thursday" ||
+
+          day == "Friday") &&
+
+        age >= 18
+
+      ) {
+
+        alert("Time to go for work");
+      } else {
+
+        alert("Insert a valid day");
+
+      }
+
+    }
+
+  </script>
+
+</html>
